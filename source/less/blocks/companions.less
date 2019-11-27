@@ -1,38 +1,48 @@
-.companions{
-	.colors(@blue, #ffffff);
-	&__title{
-	  .text(24px, 24px, bold);
-	  color:@orange;
-	}
-	&__description{
-	  .text(16px, 22px, lighter);
-	}
-	&__text{
-	  .text(16px, 22px, bold);
-	}
-	&__button{
-	  .text(18px, 18px, bold);
-	  .colors(@yellow, #161c35);
-	}
+.companions {
+  .colors(@blue, #ffffff);
+
+  &__title {
+    .text(24px, 24px, bold);
+    color: @orange;
+  }
+
+  &__description {
+    .text(16px, 22px, lighter);
+  }
+
+  &__text {
+    .text(16px, 22px, bold);
+  }
+
+  &__button {
+    .text(18px, 18px, bold);
+    .colors(@yellow, #161c35);
+  }
 }
 
-.companion{
+.companion {
+  .list();
+
+  &__card {
+    .colors(#ffffff, #1d2e5b);
+    margin-bottom: 10px;
+  }
+
+  &__level {
+    .colors(#000000;
+    #ffffff);
+  }
+
+  &__name {
+    .text(21px, 21px, bold);
+  }
+
+  &__hashtags {
+    color: #444444;
+    .text(16px, 18px, normal);
+  }
+
+  &__transport {
     .list();
-	&__card{
-	  .colors(#ffffff, #1d2e5b);
-	  margin-bottom:10px;
-	}
-	&__level{
-	  .colors(#000000; #ffffff);
-	}
-	&__name{
-	  .text(21px, 21px, bold);
-	}
-	&__hashtags{
-	  color:#444444;
-	  .text(16px, 18px, normal);
-	}
-	&__transport{
-	 .list();
-	}
+  }
 }
