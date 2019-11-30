@@ -1,0 +1,29 @@
+.main-nav {
+  .colors(#ffffff, @blue);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 25px;
+}
+
+.main-nav ul {
+  .list();
+}
+
+.site-list__item {
+  .text(30px, 36px, normal);
+}
+
+.user-list {
+  &__item {
+    .text(16px, 22px, bold);
+
+    &--btn {
+      .text(17px, 30px, bold);
+      background-color: @yellow;
+    }
+  }
+
+  &__icon {
+    background-color: #121936;
+  }
+}
