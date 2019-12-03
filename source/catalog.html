@@ -4,326 +4,337 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="site-header">
-    <a class="site-header__logo">
-      <img class="site-header__logo-image" src="" width="" height="" alt="Погнали?">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="">о сервисе</a>
-          </li>
-          <li class="site-list__item">
-            <a href="">направления</a>
-          </li>
-          <li class="site-list__item">
-            <a href="">попутчики</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a href="">авторизация</a>
-          </li>
-          <li class="user-list__item">
-            <a href="tel:+78005558628">
-              <img src="" class="user-list__icon" width="" height="" alt="tel">
-              <p class="user-list__contact">8 800 555-86-28</p>
-            </a>
-          </li>
-          <li class="user-list__item">
-            <a href="mailto:mail@htmlacademy.ru">
-              <img src="" class="user-list__icon" width="" height="" alt="e-mail">
-              <p class="user-list__contact">mail@htmlacademy.ru</p>
-            </a>
-          </li>
-        </ul>
-        <ul class="main-nav__list social-list">
-          <li class="social-list__item">
-            <a href="" aria-label="facebook">
-              <img src="" width="" height="" alt="fb">
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a href="" aria-label="vk">
-              <img src="" width="" height="" alt="vk">
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a href="" aria-label="instagram">
-              <img src="" width="" height="" alt="instagram">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="container">
+      <a class="site-header__logo">
+        <img class="site-header__logo-image" src="" width="" height="" alt="Погнали?">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a href="">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a href="">Попутчики</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item--btn">
+              <a href="">Авторизация</a>
+            </li>
+            <li class="user-list__item">
+              <a href="tel:+78005558628">
+                <img src="img/contacts-phone.svg" class="user-list__icon" width="18" height="18" alt="tel">
+                <p class="user-list__contact">8 800 555-86-28</p>
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a href="mailto:mail@htmlacademy.ru">
+                <img src="img/contacts-mail.svg" class="user-list__icon" width="18" height="13" alt="e-mail">
+                <p class="user-list__contact">mail@htmlacademy.ru</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="main-nav__list social-list">
+            <li class="social-list__item">
+              <a href="" aria-label="facebook">
+                <img src="img/facebook.svg" width="11" height="21" alt="fb">
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="" aria-label="vk">
+                <img src="img/vk.svg" width="23" height="12" alt="vk">
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="" aria-label="instagram">
+                <img src="img/instagram.svg" width="18" height="18" alt="instagram">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="site-main">
-    <h1 class="site-main__title">Попутчики</h1>
+    <section class="main-header">
+      <div class="container">
+        <h1 class="main-header__title">Направления</h1>
+      </div>
+    </section>
     <section class="companion-catalog">
-      <ul class="companion-catalog__list catalog-list">
-        <li class="catalog-list__card">
-          <div class="catalog-list__profile">
-            <img class="catalog-list__photo" src="" width="" height="" alt="Фото">
-            <button type="button" class="catalog-list__button-like">
-              <img src="" width="" height="" alt="like" class="catalog-list__icon-like">
-            </button>
-            <a class="catalog-list__name" href="">Таня Фирсова</a>
-            <span>1,5М</span>
-          </div>
-          <div class="catalog-list__hashtags">
-            <p>#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-          </div>
-          <ul class="catalog-list__countries">
+      <div class="container">
+        <ul class="companion-catalog__list catalog-list">
+          <li class="catalog-list__card">
+            <div class="catalog-list__profile">
+              <img class="catalog-list__photo" src="" width="" height="" alt="Фото">
+              <button type="button" class="catalog-list__button-like">
+                <img src="" width="" height="" alt="like" class="catalog-list__icon-like">
+              </button>
+              <a class="catalog-list__name" href="">Таня Фирсова</a>
+              <span class="catalog-list__value">1,5М</span>
+            </div>
+            <div class="catalog-list__hashtags">
+              <p>#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            </div>
             <p class="catalog-list__title">хочет посетить:</p>
-            <li class="catalog-list__countries-item">
-              <img class="catalog-list__flag" src="" width="" height="" alt="flag">
-              <p class="catalog-list__country">ШРИ-ЛАНКА</p>
-            </li>
-            <li class="catalog-list__countries-item">
-              <img class="catalog-list__flag" src="" width="" height="" alt="flag">
-              <p class="catalog-list__country">ТАИЛАНД</p>
-            </li>
-            <li class="catalog-list__countries-item">
-              <img class="catalog-list__flag" src="" width="" height="" alt="flag">
-              <p class="catalog-list__country">СЕЙШЕЛЫ</p>
-            </li>
-          </ul>
-          <div class="catalog-list__transport-list">
-            <p class="catalog-list__title">транспорт:</p>
-            <ul class="catalog-list__transport transport-list">
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="plane">
-                </button>
+            <ul class="catalog-list__countries">
+              <li class="catalog-list__countries-item">
+                <img class="catalog-list__flag" src="" width="" height="" alt="flag">
+                <p class="catalog-list__country">ШРИ-ЛАНКА</p>
               </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="bus">
-                </button>
+              <li class="catalog-list__countries-item">
+                <img class="catalog-list__flag" src="" width="" height="" alt="flag">
+                <p class="catalog-list__country">Таиланд</p>
               </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="bike">
-                </button>
-              </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="run">
-                </button>
+              <li class="catalog-list__countries-item">
+                <img class="catalog-list__flag" src="" width="" height="" alt="flag">
+                <p class="catalog-list__country">Сейшелы</p>
               </li>
             </ul>
-          </div>
-          <div class="catalog-list__level">
-            <p class="catalog-list__title">левел:</p>
-            <span>99</span>
-          </div>
-          <a href="" class="catalog-list__button">позвать!</a>
-        </li>
-        <li class="catalog-list__card">
-          <div class="catalog-list__profile">
-            <img class="catalog-list__photo" src="" width="" height="" alt="Фото">
-            <button type="button" class="catalog-list__button-like">
-              <img src="" width="" height="" alt="like" class="catalog-list__icon-like">
-            </button>
-            <a class="catalog-list__name" href="">Петя Демин</a>
-            <span>150</span>
-          </div>
-          <div class="catalog-list__hashtags">
-            <p>#бургер #бар #футбол #концерт #крафт</p>
-          </div>
-          <ul class="catalog-list__countries">
-            <p class="catalog-list__title">хочет посетить:</p>
-            <li class="catalog-list__countries-item">
-              <img class="catalog-list__flag" src="" width="" height="" alt="flag">
-              <p class="catalog-list__country">БЕЛЬГИЯ</p>
-            </li>
-            <li class="catalog-list__countries-item">
-              <img class="catalog-list__flag" src="" width="" height="" alt="flag">
-              <p class="catalog-list__country">ЧЕХИЯ</p>
-            </li>
-          </ul>
-          <div class="catalog-list__transport-list">
-            <p class="catalog-list__title">транспорт:</p>
-            <ul class="catalog-list__transport transport-list">
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="plane">
-                </button>
+            <div class="catalog-list__transport-list">
+              <p class="catalog-list__title">транспорт:</p>
+              <ul class="catalog-list__transport transport-list">
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="plane">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="bus">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="bike">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="run">
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-list__level">
+              <p class="catalog-list__title">левел:</p>
+              <span class="catalog-list__level-value">99</span>
+            </div>
+            <a href="" class="catalog-list__button">Позвать!</a>
+          </li>
+          <li class="catalog-list__card">
+            <div class="catalog-list__profile">
+              <img class="catalog-list__photo" src="" width="" height="" alt="Фото">
+              <button type="button" class="catalog-list__button-like">
+                <img src="" width="" height="" alt="like" class="catalog-list__icon-like">
+              </button>
+              <a class="catalog-list__name" href="">Петя Демин</a>
+              <span class="catalog-list__value">150</span>
+            </div>
+            <div class="catalog-list__hashtags">
+              <p>#бургер #бар #футбол #концерт #крафт</p>
+            </div>
+            <ul class="catalog-list__countries">
+              <p class="catalog-list__title">хочет посетить:</p>
+              <li class="catalog-list__countries-item">
+                <img class="catalog-list__flag" src="" width="" height="" alt="flag">
+                <p class="catalog-list__country">Бельгия</p>
               </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="bus">
-                </button>
-              </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="bike">
-                </button>
-              </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="run">
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div class="catalog-list__level">
-            <p class="catalog-list__title">левел:</p>
-            <span>80</span>
-          </div>
-          <a href="" class="catalog-list__button">позвать!</a>
-        </li>
-        <li class="catalog-list__card">
-          <div class="catalog-list__profile">
-            <img class="catalog-list__photo" src="" width="" height="" alt="Фото">
-            <button type="button" class="catalog-list__button-like">
-              <img src="" width="" height="" alt="like" class="catalog-list__icon-like">
-            </button>
-            <a class="catalog-list__name" href="">Марк Смолов</a>
-            <span>1700</span>
-          </div>
-          <div class="catalog-list__hashtags">
-            <p>#рэп #тату #хайпбист #кроссовки #суприм</p>
-          </div>
-          <ul class="catalog-list__countries">
-            <p class="catalog-list__title">хочет посетить:</p>
-            <li class="catalog-list__countries-item">
-              <img class="catalog-list__flag" src="" width="" height="" alt="flag">
-              <p class="catalog-list__country">США</p>
-            </li>
-            <li class="catalog-list__countries-item">
-              <img class="catalog-list__flag" src="" width="" height="" alt="flag">
-              <p class="catalog-list__country">АВСТРАЛИЯ</p>
-            </li>
-            <li class="catalog-list__countries-item">
-              <img class="catalog-list__flag" src="" width="" height="" alt="flag">
-              <p class="catalog-list__country">ДОМИНИКАНА</p>
-            </li>
-          </ul>
-          <div class="catalog-list__transport-list">
-            <p class="catalog-list__title">транспорт:</p>
-            <ul class="catalog-list__transport transport-list">
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="plane">
-                </button>
-              </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="bus">
-                </button>
-              </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="bike">
-                </button>
-              </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="run">
-                </button>
+              <li class="catalog-list__countries-item">
+                <img class="catalog-list__flag" src="" width="" height="" alt="flag">
+                <p class="catalog-list__country">Чехия</p>
               </li>
             </ul>
-          </div>
-          <div class="catalog-list__level">
-            <p class="catalog-list__title">левел:</p>
-            <span>25</span>
-          </div>
-          <a href="" class="catalog-list__button">позвать!</a>
-        </li>
-        <li class="catalog-list__card">
-          <div class="catalog-list__profile">
-            <img class="catalog-list__photo" src="" width="" height="" alt="Фото">
-            <button type="button" class="catalog-list__button-like">
-              <img src="" width="" height="" alt="like" class="catalog-list__icon-like">
-            </button>
-            <a class="catalog-list__name" href="">Лариса Роговая</a>
-            <span>23</span>
-          </div>
-          <div class="catalog-list__hashtags">
-            <p>#образование #карьера #учеба #линкедин</p>
-          </div>
-          <ul class="catalog-list__countries">
-            <p class="catalog-list__title">хочет посетить:</p>
-            <li class="catalog-list__countries-item">
-              <img class="catalog-list__flag" src="" width="" height="" alt="flag">
-              <p class="catalog-list__country">ВЕЛИКОБРИТАНИЯ</p>
-            </li>
-            <li class="catalog-list__countries-item">
-              <img class="catalog-list__flag" src="" width="" height="" alt="flag">
-              <p class="catalog-list__country">ГЕРМАНИЯ</p>
-            </li>
-          </ul>
-          <div class="catalog-list__transport-list">
-            <p class="catalog-list__title">транспорт:</p>
-            <ul class="catalog-list__transport transport-list">
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="plane">
-                </button>
+            <div class="catalog-list__transport-list">
+              <p class="catalog-list__title">транспорт:</p>
+              <ul class="catalog-list__transport transport-list">
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="plane">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="bus">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="bike">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="run">
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-list__level">
+              <p class="catalog-list__title">левел:</p>
+              <span class="catalog-list__level-value">80</span>
+            </div>
+            <a href="" class="catalog-list__button">Позвать!</a>
+          </li>
+          <li class="catalog-list__card">
+            <div class="catalog-list__profile">
+              <img class="catalog-list__photo" src="" width="" height="" alt="Фото">
+              <button type="button" class="catalog-list__button-like">
+                <img src="" width="" height="" alt="like" class="catalog-list__icon-like">
+              </button>
+              <a class="catalog-list__name" href="">Марк Смолов</a>
+              <span class="catalog-list__value">1700</span>
+            </div>
+            <div class="catalog-list__hashtags">
+              <p>#рэп #тату #хайпбист #кроссовки #суприм</p>
+            </div>
+            <ul class="catalog-list__countries">
+              <p class="catalog-list__title">хочет посетить:</p>
+              <li class="catalog-list__countries-item">
+                <img class="catalog-list__flag" src="" width="" height="" alt="flag">
+                <p class="catalog-list__country">США</p>
               </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="bus">
-                </button>
+              <li class="catalog-list__countries-item">
+                <img class="catalog-list__flag" src="" width="" height="" alt="flag">
+                <p class="catalog-list__country">Австралия</p>
               </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="bike">
-                </button>
-              </li>
-              <li class="transport-list__icon">
-                <button type="button">
-                  <img class="transport-list__image" src="" width="" height="" alt="run">
-                </button>
+              <li class="catalog-list__countries-item">
+                <img class="catalog-list__flag" src="" width="" height="" alt="flag">
+                <p class="catalog-list__country">Доминикана</p>
               </li>
             </ul>
-          </div>
-          <div class="catalog-list__level">
-            <p class="catalog-list__title">левел:</p>
-            <span>50</span>
-          </div>
-          <a href="" class="catalog-list__button">позвать!</a>
-        </li>
-      </ul>
-      <a class="companion-catalog__button" href="">показать еще</a>
-      <div class="companion-catalog__toggles">
-        <a class="companion-catalog__toggle--back" href="" aria-label="Предыдущая страница"></a>
-        <a class="companion-catalog__toggle--next" href="" aria-label="Следующая страница"></a>
+            <div class="catalog-list__transport-list">
+              <p class="catalog-list__title">транспорт:</p>
+              <ul class="catalog-list__transport transport-list">
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="plane">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="bus">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="bike">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="run">
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-list__level">
+              <p class="catalog-list__title">левел:</p>
+              <span class="catalog-list__level-value">25</span>
+            </div>
+            <a href="" class="catalog-list__button">Позвать!</a>
+          </li>
+          <li class="catalog-list__card">
+            <div class="catalog-list__profile">
+              <img class="catalog-list__photo" src="" width="" height="" alt="Фото">
+              <button type="button" class="catalog-list__button-like">
+                <img src="" width="" height="" alt="like" class="catalog-list__icon-like">
+              </button>
+              <a class="catalog-list__name" href="">Лариса Роговая</a>
+              <span class="catalog-list__value">23</span>
+            </div>
+            <div class="catalog-list__hashtags">
+              <p>#образование #карьера #учеба #линкедин</p>
+            </div>
+            <ul class="catalog-list__countries">
+              <p class="catalog-list__title">хочет посетить:</p>
+              <li class="catalog-list__countries-item">
+                <img class="catalog-list__flag" src="" width="" height="" alt="flag">
+                <p class="catalog-list__country">Великобритания</p>
+              </li>
+              <li class="catalog-list__countries-item">
+                <img class="catalog-list__flag" src="" width="" height="" alt="flag">
+                <p class="catalog-list__country">Германия</p>
+              </li>
+            </ul>
+            <div class="catalog-list__transport-list">
+              <p class="catalog-list__title">транспорт:</p>
+              <ul class="catalog-list__transport transport-list">
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="plane">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="bus">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="bike">
+                  </button>
+                </li>
+                <li class="transport-list__icon">
+                  <button type="button">
+                    <img class="transport-list__image" src="" width="" height="" alt="run">
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-list__level">
+              <p class="catalog-list__title">левел:</p>
+              <span class="catalog-list__level-value">50</span>
+            </div>
+            <a href="" class="catalog-list__button">Позвать!</a>
+          </li>
+        </ul>
+        <a class="companion-catalog__button" href="">Показать еще</a>
+        <div class="companion-catalog__toggles">
+          <a class="companion-catalog__toggle--back" href="" aria-label="Предыдущая страница"></a>
+          <a class="companion-catalog__toggle--next" href="" aria-label="Следующая страница"></a>
+        </div>
       </div>
     </section>
   </main>
   <footer class="site-footer">
-    <a class="site-footer__logo">
-      <img class="site-header__logo-image" src="" width="" height="" alt="Погнали?">
-    </a>
-    <ul class="site-footer__list social-list">
-      <li class="social-list__item">
-        <a href="" aria-label="facebook">
-          <img src="" width="" height="" alt="fb">
-        </a>
-      </li>
-      <li class="social-list__item">
-        <a href="" aria-label="vk">
-          <img src="" width="" height="" alt="vk">
-        </a>
-      </li>
-      <li class="social-list__item">
-        <a href="" aria-label="instagram">
-          <img src="" width="" height="" alt="instagram">
-        </a>
-      </li>
-    </ul>
-    <div class="site-footer__copyright">
-      <p>Разработано</p>
-      <a class="site-footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">
-        <img class="site-footer__logo-link" src="" width="" height="" alt="HTML Academy">
+    <div class="container">
+      <a class="site-footer__logo">
+        <img class="site-header__logo-image" src="" width="" height="" alt="Погнали?">
       </a>
+      <ul class="site-footer__list social-list">
+        <li class="social-list__item">
+          <a href="" aria-label="facebook">
+            <img src="img/facebook.svg" width="11" height="21" alt="fb">
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="" aria-label="vk">
+            <img src="img/vk.svg" width="23" height="12" alt="vk">
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="" aria-label="instagram">
+            <img src="img/instagram.svg" width="18" height="18" alt="instagram">
+          </a>
+        </li>
+      </ul>
+      <div class="site-footer__copyright">
+        <p>Разработано</p>
+        <a class="site-footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">
+          <img class="site-footer__logo-link" src="" width="" height="" alt="HTML Academy">
+        </a>
+      </div>
     </div>
   </footer>
 </body>

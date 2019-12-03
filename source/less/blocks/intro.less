@@ -1,0 +1,68 @@
+.intro {
+  .colors(#161c36, #ffffff);
+
+  background: url("../img/globe-back-mobile@1x.jpg") no-repeat 50% 0 #161c36;
+
+  &__title {
+    .text(36px, 40px, bold);
+  }
+
+  &__quotation {
+    .colors(#161c35, #ffffff);
+    .text(16px, 22px, bold);
+
+    & q {
+      .text(16px, 22px, lighter);
+    }
+  }
+
+  &__list {
+    background-color: @blue;
+    .list();
+  }
+
+  &__text {
+    color: #161c35;
+    margin: 0;
+  }
+
+  &__item {
+    .text(18px, 18px, bold);
+
+    &:nth-child(1) {
+      background-color: #ff8d30;
+    }
+
+    &:nth-child(2) {
+      background-color: #ffa530;
+    }
+
+    &:nth-child(3) {
+      background-color: #ffbd30;
+    }
+
+    &:nth-child(4) {
+      background-color: #ffd74b;
+    }
+  }
+}
+
+.contacts-list {
+  .list();
+
+  &__login {
+    .colors(@yellow, @blue);
+    .text(17px, 30px, bold);
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    &--phone {
+      background-color: #ff8d30;
+    }
+
+    &--mail {
+      background-color: #ffbd30;
+    }
+  }
+}

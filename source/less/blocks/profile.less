@@ -1,0 +1,55 @@
+.profile {
+  .colors(@gray, #666668);
+  .text(16px, 22px, lighter);
+
+  &__title {
+    color: @orange;
+    .text(24px, 24px, bold);
+    margin-left: 25px;
+  }
+
+  &__number {
+    color: #ffffff;
+  }
+
+  & tr {
+    &:nth-child(1) .profile__number {
+      background-color: #ffa530;
+    }
+
+    &:nth-child(2) .profile__number {
+      background-color: #ffbd30;
+    }
+
+    &:nth-child(3) .profile__number {
+      background-color: @yellow;
+    }
+  }
+
+  &__button {
+    .text(16px, 16px, bold);
+    color: @blue;
+    margin-left: 25px;
+  }
+
+  &__price {
+    padding: 0 25px;
+  }
+}
+
+.business {
+  background-color: #ffffff;
+
+  &__title {
+    .text(24px, 24px, bold);
+    color: @orange;
+    text-align: center;
+  }
+
+  &__button {
+    .colors(#f3f4f8, @blue);
+    .text(16px, 24px, bold);
+    text-transform: uppercase;
+    border: none;
+  }
+}
