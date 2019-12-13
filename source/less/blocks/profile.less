@@ -1,8 +1,16 @@
 .profile {
+  position: relative;
+  padding: 25px;
+  height: 400px;
   .colors(@gray, #666668);
   .text(16px, 22px, lighter);
 
+  &__price {
+    width: 250px;
+  }
+
   &__title {
+    width: 105px;
     color: @orange;
     .text(24px, 24px, bold);
     margin-left: 25px;
@@ -13,6 +21,9 @@
   }
 
   & tr {
+    display: flex;
+    flex-direction: column;
+
     &:nth-child(1) .profile__number {
       background-color: #ffa530;
     }
@@ -39,6 +50,13 @@
 
 .business {
   background-color: #ffffff;
+  padding: 25px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 395px;
+  width: 270px;
 
   &__title {
     .text(24px, 24px, bold);
@@ -51,5 +69,78 @@
     .text(16px, 24px, bold);
     text-transform: uppercase;
     border: none;
+  }
+}
+
+@media (min-width:@tablet-width) {
+  .profile {
+    padding: 40px;
+    height: 480px;
+
+    &__price {
+      width: 690px;
+      .text(28px, 33px, lighter);
+    }
+
+    &__number {
+      .text(28px, 28px, normal);
+    }
+
+    &__button {
+      .text(20px, 20px, bold);
+    }
+
+    &__title {
+      .text(45px, 45px, bold);
+      text-align: center;
+      width: 100%;
+    }
+
+    & tr {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .business {
+    text-align: center;
+    padding: 90px;
+    height: 350px;
+    width: 505px;
+    top: 0;
+
+    &__price {
+      .text(22px, 28px, lighter);
+      width: 100%;
+    }
+
+    &__title {
+      .text(45px, 45px, bold);
+    }
+
+    &__button {
+      .text(24px, 24px, bold);
+      text-transform: none;
+    }
+  }
+}
+
+@media (min-width:@desktop-width) {
+  .profile {
+    padding: 130px;
+    height: 490px;
+
+    &__price {
+      width: 910px;
+    }
+  }
+
+  .business {
+    width: 630px;
+    height: 445px;
+    padding: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

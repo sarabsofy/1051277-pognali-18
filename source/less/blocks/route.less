@@ -1,5 +1,7 @@
 .route {
   .colors(#edeff6, #444444);
+  padding: 25px;
+  height: 935px;
 
   &__title {
     .text(24px, 24px, bold);
@@ -8,6 +10,7 @@
   }
 
   &__descriptions {
+    width: 190px;
     margin: 0 25px;
     margin-bottom: 65px;
     .text(16px, 22px, lighter);
@@ -41,5 +44,44 @@
 
   &__visitors {
     .text(16px, 30px, medium);
+  }
+}
+
+@media (min-width:@tablet-width) {
+  .route {
+    padding: 75px;
+
+    &__title {
+      .text(45px, 45px, bold);
+      margin-left: 0;
+    }
+
+    &__descriptions {
+      .text(28px, 33px, lighter);
+      margin-left: 0;
+      width: 340px;
+    }
+
+    &__button {
+      .text(24px, 24px, bold);
+    }
+  }
+}
+
+@media (min-width:@desktop-width) {
+  .route {
+    height: 490px;
+    position: relative;
+    padding: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &__list {
+      position: absolute;
+      top: 135px;
+      left: 135px;
+      width: 560px;
+    }
   }
 }

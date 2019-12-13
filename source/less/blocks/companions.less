@@ -1,17 +1,21 @@
 .companions {
+  padding: 25px;
   .colors(@blue, #ffffff);
 
   &__title {
     .text(24px, 24px, bold);
     color: @orange;
+    margin: 25px;
   }
 
   &__description {
     .text(16px, 22px, lighter);
+    margin: 25px;
   }
 
   &__text {
     .text(16px, 22px, bold);
+    margin: 25px;
   }
 
   &__button {
@@ -26,6 +30,7 @@
   &__card {
     .colors(#ffffff, #1d2e5b);
     margin-bottom: 10px;
+    width: 270px;
   }
 
   &__level {
@@ -44,5 +49,60 @@
 
   &__transport {
     .list();
+  }
+}
+
+@media (min-width:@tablet-width) {
+  .companions {
+    padding: 75px;
+
+    &__title {
+      .text(45px, 45px, bold);
+      margin-left: 0;
+    }
+
+    &__description {
+      .text(28px, 33px, lighter);
+      margin-left: 0;
+    }
+
+    &__text {
+      .text(21px, 25px, bold);
+      margin-left: 0;
+    }
+
+    &__button {
+      .text(24px, 24px, bold);
+    }
+  }
+
+  .companion {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__card {
+      width: 285px;
+    }
+  }
+}
+
+@media (min-width:@desktop-width) {
+  .companions {
+    padding: 130px;
+    position: relative;
+
+    &__description {
+      width: 430px;
+    }
+
+    &__text {
+      width: 260px;
+    }
+  }
+
+  .companion {
+    position: absolute;
+    top: 130px;
+    right: 60px;
   }
 }

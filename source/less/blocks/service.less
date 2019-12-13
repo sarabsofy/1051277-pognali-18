@@ -1,6 +1,8 @@
 .service {
   .colors(@blue, #ffffff);
-  background: url("../img/about-mobile@1x.png") no-repeat 50% 0 @blue;
+  background: url("../img/about-mobile@1x.png") no-repeat 0 0 @blue;
+  padding: 33px 50px 70px 50px;
+  min-height: 245px;
 
   &__button {
     display: none;
@@ -14,9 +16,55 @@
 
   &__description {
     .text(16px, 22px, lighter);
+    width: 220px;
   }
 
   &__text {
     font-weight: bold;
+    width: 220px;
+  }
+}
+
+@media (min-width:@tablet-width) {
+  .service {
+    padding: 43px 75px 87px 75px;
+    min-height: 555px;
+    background: url("../img/about-tablet@1x.png") no-repeat 95% 25% @blue;
+
+    &__title {
+      .text(45px, 45px, bold);
+    }
+
+    &__description {
+      .text(28px, 33px, lighter);
+      width: 300px;
+    }
+
+    &__text {
+      .text(21px, 25px, bold);
+      width: 300px;
+    }
+
+    &__button {
+      display: block;
+      .colors(@yellow, #1d2e5b);
+      .text(24px, 24px, bold);
+    }
+  }
+}
+
+@media (min-width:@desktop-width) {
+  .service {
+    padding: 130px 130px 160px 130px;
+    min-height: 460px;
+    background: url("../img/about-desktop@1x.png") no-repeat 95% 50% @blue;
+
+    &__description {
+      width: 620px;
+    }
+
+    &__text {
+      width: 430px;
+    }
   }
 }

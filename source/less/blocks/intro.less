@@ -1,15 +1,23 @@
 .intro {
   .colors(#161c36, #ffffff);
-
-  background: url("../img/globe-back-mobile@1x.jpg") no-repeat 50% 0 #161c36;
+  background: url("../img/globe-back-mobile@1x.jpg") no-repeat 0% 0 #161c36;
+  padding: 25px;
+  min-height: 925px;
+  text-align: center;
 
   &__title {
+    display: block;
+    width: 255px;
+    margin: 0 auto;
     .text(36px, 40px, bold);
   }
 
   &__quotation {
     .colors(#161c35, #ffffff);
     .text(16px, 22px, bold);
+    text-align: left;
+    margin-left: 0;
+    width: 160px;
 
     & q {
       .text(16px, 22px, lighter);
@@ -19,6 +27,7 @@
   &__list {
     background-color: @blue;
     .list();
+    text-align: left;
   }
 
   &__text {
@@ -27,6 +36,9 @@
   }
 
   &__item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     .text(18px, 18px, bold);
 
     &:nth-child(1) {
@@ -49,6 +61,8 @@
 
 .contacts-list {
   .list();
+  display: flex;
+  justify-content: center;
 
   &__login {
     .colors(@yellow, @blue);
@@ -63,6 +77,66 @@
 
     &--mail {
       background-color: #ffbd30;
+    }
+  }
+}
+
+@media (min-width:@tablet-width) {
+  .contacts-list {
+    display: none;
+  }
+
+  .intro {
+    padding: 65px 40px 100px 40px;
+    min-height: 960px;
+    background: url("../img/globe-back-tablet@1x.jpg") no-repeat 95% 0 #161c36;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 50%;
+      .text(24px, 24px, bold);
+    }
+
+    &__title {
+      width: 395px;
+      .text(60px, 70px, bold);
+    }
+
+    &__quotation {
+      width: 285px;
+      .text(21px, 25px, bold);
+
+      & q {
+        .text(28px, 33px, lighter);
+      }
+    }
+  }
+}
+
+@media (min-width:@desktop-width) {
+  .intro {
+    padding: 115px 60px 120px 60px;
+    min-height: 410px;
+    background: url("../img/globe-back-desktop@1x.jpg") no-repeat 95% 0 #161c36;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__list {
+      width: 100%;
+    }
+
+    &__item {
+      width: 25%;
+    }
+
+    &__title {
+      text-align: left;
+      margin-left: 0;
     }
   }
 }

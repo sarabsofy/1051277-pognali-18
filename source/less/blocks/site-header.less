@@ -1,3 +1,34 @@
 .site-header {
   .colors(#161c36, #ffffff);
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  min-height: 50px;
+
+  &__logo {
+    min-height: 16px;
+  }
+
+  &__login {
+    display: none;
+    .text(17px, 30px, bold);
+    .colors(@yellow, @blue);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-header {
+    &__login {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-header {
+    &__login {
+      display: none;
+    }
+  }
 }
