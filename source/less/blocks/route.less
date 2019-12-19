@@ -1,5 +1,6 @@
 .route {
   .colors(#edeff6, #444444);
+  position: relative;
   padding: 25px;
   height: 935px;
 
@@ -21,6 +22,9 @@
   }
 
   &__button {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
     .text(18px, 18px, bold);
     .colors(@yellow, #161c35);
   }
@@ -64,6 +68,8 @@
 
     &__button {
       .text(24px, 24px, bold);
+      left: 75px;
+      bottom: 75px;
     }
   }
 }
@@ -71,17 +77,20 @@
 @media (min-width: @desktop-width) {
   .route {
     height: 490px;
-    position: relative;
     padding: 130px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
 
     &__list {
-      position: absolute;
-      top: 135px;
-      left: 135px;
       width: 560px;
+      order: -1;
+    }
+
+    &__button {
+      position: static;
+    }
+
+    &__text {
+      margin-left: auto;
     }
   }
 }
