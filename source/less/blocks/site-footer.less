@@ -1,13 +1,33 @@
 .site-footer {
+  height: 190px;
+  padding: 25px;
   .colors(#ffffff, #444444);
   .text(16px, 22px, normal);
+  text-align: center;
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .site-footer .social-list {
   .list();
+  display: flex;
+  justify-content: center;
 
   &__item {
     background-color: @yellow;
     text-align: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-footer {
+    padding: 40px;
+    height: 75px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
   }
 }
