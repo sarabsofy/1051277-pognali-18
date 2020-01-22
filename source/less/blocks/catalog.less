@@ -1,130 +1,22 @@
-.companion-catalog {
-  .colors(@gray, #767676);
-  .text(15px, 18px, normal);
-  padding: 25px;
-  text-align: center;
-
-  &__list {
-    .list();
-  }
-
-  &__button {
-    .text(17px, 30px, bold);
-    color: #1d2e5b;
-    text-transform: uppercase;
-  }
-
-  &__switches {
-    display: flex;
-    justify-content: space-between;
-    background-color: #ffffff;
-    padding: 25px;
-    height: 20px;
-  }
-
-  &__switch {
-    display: none;
-    .text(20px, 30px, bold);
-    .list();
-    color: #161c35;
-  }
-
-  &__toggles {
-    display: flex;
-    width: 270px;
-    .list();
-  }
-}
-
-.catalog-list {
-  &__card {
-    background-color: #ffffff;
-    margin-bottom: 20px;
-    padding: 18px;
-    width: 235px;
-    height: 380px;
-  }
-
-  &__name {
-    .text(20px, 20px, bold);
-    color: #1d2e5b;
-  }
-
-  &__value {
-    .text(14px, 21px, bold);
-    color: #161c35;
-  }
-
-  &__button {
-    .text(17px, 30px, bold);
-    .colors(@yellow, #161c35);
-  }
-
-  &__countries {
-    .list();
-  }
-
-  &__transport {
-    .list();
-    display: flex;
-  }
-
-  &__country {
-    .text(15px, 18px, medium);
-    color: #1d2e5b;
-    text-transform: uppercase;
-  }
-
-  &__level-value {
-    .text(24px, 18px, bold);
-    color: #1d2e5b;
-  }
-
-  &__countries-item {
-    display: flex;
-  }
-
-  &__title {
-    margin: 0;
-  }
+.catalog {
+  background-color: #edeff6;
+  padding-top: 40px;
 }
 
 @media (min-width: @tablet-width) {
-  .companion-catalog {
-    padding: 40px;
-
-    &__switches {
-      padding: 30px;
-    }
-
-    &__switch {
-      display: flex;
-    }
-  }
-
-  .catalog-list {
-    &__card {
-      display: flex;
-      flex-wrap: wrap;
-      width: 620px;
-      height: 270px;
-      padding: 40px;
-      margin-bottom: 40px;
-    }
+  .catalog {
+    padding-top: 97px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .companion-catalog {
-    padding: 60px;
-  }
-
-  .catalog-list {
-    &__card {
-      width: 850px;
-      height: 195px;
-      padding: 50px;
-      margin-bottom: 30px;
-    }
+  .catalog {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1320px;
+    padding: 0 60px;
+    padding-top: 70px;
   }
 }

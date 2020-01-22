@@ -8,8 +8,13 @@
 @import "blocks/route.less";
 @import "blocks/profile.less";
 @import "blocks/companions.less";
-@import "blocks/site-main.less";
+@import "blocks/main-header.less";
 @import "blocks/catalog.less";
+@import "blocks/companion-catalog.less";
+@import "blocks/registration.less";
+@import "blocks/map.less";
+@import "blocks/form.less";
+@import "blocks/filter.less";
 
 @font-face {
   font-family: "BloggerSans";
@@ -75,6 +80,30 @@
   font-style: italic;
 }
 
+@media (max-width: 1439px) {
+  .modal-close {
+    display: none;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-300px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 body {
   min-width: 320px;
   margin: 0;
@@ -96,4 +125,9 @@ a {
   padding: 0;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
 }

@@ -1,70 +1,174 @@
 .service {
   .colors(@blue, #ffffff);
-  background: url("../img/about-mobile@1x.png") no-repeat 0 0 @blue;
-  padding: 33px 50px 70px 50px;
-  min-height: 245px;
+  overflow: hidden;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
 
-  &__button {
-    display: none;
-  }
+.service__wrapper {
+  background: url("../img/about-mobile@1x.png") no-repeat 75% 0,
+    @blue url("../img/about-back-mobile.png") no-repeat 0 0;
+  padding: 30px 45px 82px 49px;
+  position: relative;
+  margin: 0 auto;
+  width: 226px;
+}
 
-  &__title {
-    margin: 0;
-    .text(24px, 24px, bold);
-    color: @orange;
-  }
+.service__button {
+  display: none;
+}
 
-  &__description {
-    .text(16px, 22px, lighter);
-    width: 220px;
-  }
+.service__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+  .text(24px, 24px, bold);
+  color: @orange;
+}
 
-  &__text {
-    font-weight: bold;
-    width: 220px;
+.service__description {
+  position: relative;
+  .text(16px, 22px, lighter);
+  width: 210px;
+  margin: 0 0 20px 0;
+}
+
+.service__text {
+  .text(16px, 22px, bold);
+  width: 220px;
+  margin: 0;
+}
+
+@media (min-resolution: @retina-dppx) {
+  .service__wrapper {
+    background-image: url("../img/about-mobile@2x.png"), url("../img/about-back-mobile.png");
+    background-size: 292px auto, 113px auto;
   }
 }
 
+
 @media (min-width: @tablet-width) {
   .service {
-    padding: 43px 75px 87px 75px;
-    min-height: 555px;
-    background: url("../img/about-tablet@1x.png") no-repeat 95% 25% @blue;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+  }
 
-    &__title {
-      .text(45px, 45px, bold);
+  .service__wrapper {
+    background: url("../img/about-tablet@1x.png") no-repeat 98% 45px,
+      @blue url("../img/about-back-tablet.png") no-repeat 50% 0;
+    padding: 35px 75px 87px 75px;
+    width: 618px;
+  }
+
+  @media (min-resolution: @retina-dppx) {
+    .service__wrapper {
+      background-image: url("../img/about-tablet@2x.png"), url("../img/about-back-tablet.png");
+      background-size: 376px auto, 688px auto;
     }
+  }
 
-    &__description {
-      .text(28px, 33px, lighter);
-      width: 300px;
-    }
+  .service__title {
+    .text(45px, 45px, bold);
+    margin-bottom: 42px;
+  }
 
-    &__text {
-      .text(21px, 25px, bold);
-      width: 300px;
-    }
+  .service__description {
+    .text(28px, 33px, lighter);
+    width: 300px;
+    margin-bottom: 32px;
+  }
 
-    &__button {
-      display: block;
-      .colors(@yellow, #1d2e5b);
-      .text(24px, 24px, bold);
+  .service__text {
+    .text(21px, 25px, bold);
+    width: 300px;
+    margin-bottom: 53px;
+  }
+
+  .service__button {
+    display: block;
+    position: relative;
+    .colors(@yellow, #1d2e5b);
+    .text(24px, 24px, bold);
+    .button();
+    width: 210px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 32px;
+      right: 37px;
+      width: 0;
+      height: 0;
+      border: 9px solid #1d2e5b;
+      border-right: 0;
+      border-bottom-color: transparent;
+      border-top-color: transparent;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .service {
-    padding: 130px 130px 160px 130px;
-    min-height: 460px;
-    background: url("../img/about-desktop@1x.png") no-repeat 95% 50% @blue;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 
-    &__description {
-      width: 620px;
+  .service__wrapper {
+    background: url("../img/about-desktop@1x.png") no-repeat 93% 85px @blue;
+    padding: 130px 130px 163px 130px;
+    width: 1180px;
+  }
+
+  @media (min-resolution: @retina-dppx) {
+    .service__wrapper {
+      background-image: url("../img/about-desktop@2x.png");
+      background-size: 630px auto;
+    }
+  }
+
+  .service__title {
+    margin-bottom: 58px;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -55px;
+      left: -70px;
+      width: 215px;
+      height: 215px;
+      background-color: #141b3b;
+      border-radius: 17px;
+      z-index: -1;
+    }
+  }
+
+  .service__description {
+    z-index: 2;
+    width: 620px;
+    margin-bottom: 40px;
+  }
+
+  .service__text {
+    width: 430px;
+    margin-bottom: 85px;
+  }
+
+  .service__button {
+    &:hover {
+      background-color: #ffbd30;
     }
 
-    &__text {
-      width: 430px;
+    &:focus {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      color: #bb923d;
+    }
+
+    &:active::before {
+      border-left-color: #bb923d;
     }
   }
 }
