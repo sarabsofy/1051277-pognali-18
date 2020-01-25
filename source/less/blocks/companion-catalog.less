@@ -129,7 +129,9 @@
 .catalog-list__name {
   .text(20px, 20px, bold);
   color: #1d2e5b;
-  width: 100px;
+  width: min-content;
+  display: flex;
+  flex-wrap: wrap;
   text-align: left;
   position: relative;
 
@@ -213,7 +215,9 @@
 
 .catalog-list__transport {
   .list();
+  width: 164px;
   display: flex;
+  flex-wrap: wrap;
   margin: 18px 7px;
 }
 
@@ -476,6 +480,11 @@
     margin-right: 33px;
   }
 
+  .catalog-list__photo img {
+    width: 190px;
+    height: 190px;
+  }
+
   .catalog-list__name {
     .text(30px, 30px, bold);
     width: max-content;
@@ -539,7 +548,10 @@
   }
 
   .transports-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    height: 128px;
     margin: 2px 0 6px 108px;
   }
 
@@ -720,6 +732,8 @@
   }
 
   .catalog-list__photo img {
+    width: 285px;
+    height: 285px;
     transition: all 0.3s ease-out;
   }
 
@@ -765,6 +779,9 @@
 
   .transports-list {
     display: flex;
+    flex-direction: row;
+    width: 170px;
+    height: auto;
     margin-left: 40px;
   }
 

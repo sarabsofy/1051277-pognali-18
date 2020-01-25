@@ -1,3 +1,7 @@
+.form-page .site-header__wrapper {
+  padding-top: 19px;
+}
+
 .site-header {
   .colors(#161c36, #ffffff);
   position: relative;
@@ -114,6 +118,10 @@
 }
 
 @media (min-width: @tablet-width) and (max-width: 1439px) {
+  .form-page .site-header__wrapper {
+    padding-top: 40px;
+  }
+
   .site-header {
     background-color: #182044;
 
@@ -124,6 +132,10 @@
 
   .inner-page .site-header {
     background-color: #161c35;
+
+    &--active {
+      background-color: #ffffff;
+    }
   }
 
   .site-header__wrapper {
@@ -148,6 +160,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form-page .site-header__wrapper {
+    padding-top: 47px;
+  }
+
   .site-header__wrapper {
     padding: 50px 60px 10px 60px;
     width: 1320px;

@@ -162,12 +162,14 @@
 
 
 .companion__name {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   .text(21px, 21px, bold);
   margin: 20px auto;
   margin-bottom: 15px;
   width: max-content;
+  max-width: 210px;
 
   &::before {
     position: absolute;
@@ -200,12 +202,17 @@
 }
 
 .companion__flags {
+  .list();
   position: absolute;
   top: 272px;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   z-index: 2;
+}
+
+.companion__flags li {
+  position: relative;
 }
 
 .companion__flag {
@@ -220,8 +227,8 @@
     margin-right: 0;
   }
 
-  &:hover .companion__tooltip,
-  :focus .companion__tooltip {
+  &:hover ~ .companion__tooltip,
+  &:focus ~ .companion__tooltip {
     display: block;
   }
 }
@@ -259,22 +266,30 @@
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   width: 120px;
   margin: 18px auto;
   margin-bottom: 0;
 }
 
 .transport-list button {
-  position: relative;
   border: none;
   outline: none;
   padding: 0;
   background-color: transparent;
 
-  &:hover .companion__tooltip,
-  :focus .companion__tooltip {
+  &:hover ~ .companion__tooltip,
+  &:focus ~ .companion__tooltip {
     display: block;
+  }
+}
+
+.transport-list__icon {
+  position: relative;
+  margin-right: 13px;
+
+  &:nth-child(4n) {
+    margin-right: 0;
   }
 }
 

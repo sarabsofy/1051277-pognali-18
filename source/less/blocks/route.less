@@ -28,7 +28,7 @@
 }
 
 .route__wrapper {
-  padding: 50px 25px 80px 25px;
+  padding: 50px 25px 5px 25px;
   margin: 0 auto;
   position: relative;
   width: 270px;
@@ -52,16 +52,15 @@
 }
 
 .route__button {
-  position: absolute;
+  position: relative;
   display: block;
-  left: 25px;
-  bottom: 5px;
-  width: calc(100% - 100px);
-  padding: 23px 25px 24px 25px;
+  width: calc(100% - 60px);
+  padding: 23px 35px 24px 25px;
   .text(18px, 18px, bold);
   .colors(@yellow, #161c35);
   border-radius: 10px;
   z-index: 999;
+  margin-top: 20px;
 
   &::before {
     content: "";
@@ -174,7 +173,7 @@
 
   .route__wrapper {
     background: url("../img/flags-back@1x.png") no-repeat 92% 80px #edeff6;
-    padding: 70px 75px 140px 75px;
+    padding: 70px 75px 25px 75px;
     width: 618px;
   }
 
@@ -199,11 +198,10 @@
 
   .route__button {
     .text(24px, 24px, bold);
-    left: 75px;
-    bottom: 25px;
-    width: calc(100% - 218px);
+    width: calc(100% - 70px);
     padding: 30px 35px 26px 35px;
     border-radius: 18px;
+    margin-top: 45px;
 
     &::before {
       top: 34px;
@@ -305,7 +303,7 @@
 
   .route__wrapper {
     background-position: 95% 90px;
-    padding: 162px 240px 82px 130px;
+    padding: 162px 240px 77px 130px;
     width: 1070px;
     display: flex;
   }
@@ -316,10 +314,10 @@
   }
 
   .route__button {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 208px;
+    position: absolute;
+    width: 206px;
+    bottom: 77px;
+    left: 860px;
 
     &:hover {
       background-color: #ffbd30;
@@ -347,12 +345,13 @@
   }
 
   .route__descriptions {
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
 
 
   .countries-list {
     width: 560px;
+    max-height: 450px;
 
     &::after {
       top: -70px;
