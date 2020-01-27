@@ -160,6 +160,18 @@
   border-radius: 50%;
   background-color: #ffffff;
   text-align: center;
+
+  &:first-child {
+    & .account__label svg {
+      margin-right: 3px;
+    }
+  }
+}
+
+.account__label {
+  display: block;
+  width: 33px;
+  height: 33px;
 }
 
 .account__label svg {
@@ -257,6 +269,11 @@
   }
 
   .account__list li {
+    width: 43px;
+    height: 43px;
+  }
+
+  .account__label {
     width: 43px;
     height: 43px;
   }
