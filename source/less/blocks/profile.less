@@ -1,143 +1,314 @@
 .profile {
   position: relative;
-  padding: 25px;
-  height: 400px;
   .colors(@gray, #666668);
   .text(16px, 22px, lighter);
 
-  &__price {
-    width: 250px;
-    padding: 0 25px;
-  }
-
-  &__title {
-    width: 105px;
-    color: @orange;
-    .text(24px, 24px, bold);
-    margin-left: 25px;
-  }
-
-  &__number {
-    color: #ffffff;
-  }
-
-  & tr {
-    display: flex;
-    flex-direction: column;
-
-    &:nth-child(1) .profile__number {
-      background-color: #ffa530;
-    }
-
-    &:nth-child(2) .profile__number {
-      background-color: #ffbd30;
-    }
-
-    &:nth-child(3) .profile__number {
-      background-color: @yellow;
-    }
-  }
-
-  &__button {
-    .text(16px, 16px, bold);
-    color: @blue;
-    margin-left: 25px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: #edeff6;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    z-index: 2;
   }
 }
 
+.profile__wrapper {
+  position: relative;
+  padding: 73px 25px 10px 25px;
+  margin: 0 auto;
+  width: 270px;
+}
+
+.profile__image {
+  position: absolute;
+  top: 63px;
+  right: 25px;
+}
+
+.profile__price {
+  width: 200px;
+  margin: 0 25px 28px 23px;
+}
+
+.profile__title {
+  width: 105px;
+  color: @orange;
+  .text(24px, 24px, bold);
+  margin: 0 0 45px 25px;
+}
+
+.profile__number {
+  position: absolute;
+  top: 2px;
+  right: -50px;
+  color: #ffffff;
+  width: 35px;
+  height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.profile tr {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 8px 0;
+  border-bottom: 1px solid #e1e3e9;
+
+  &:first-child {
+    border-top: 1px solid #e1e3e9;
+  }
+
+  &:nth-child(1) .profile__number {
+    background-color: #ffa530;
+  }
+
+  &:nth-child(2) .profile__number {
+    background-color: #ffbd30;
+  }
+
+  &:nth-child(3) .profile__number {
+    background-color: @yellow;
+  }
+}
+
+.profile__button {
+  .text(16px, 16px, bold);
+  color: @blue;
+  margin-left: 25px;
+}
+
+.profile__business-icon {
+  display: none;
+}
+
 .business {
+  display: none;
   background-color: #ffffff;
-  padding: 25px;
+  padding-top: 30px;
   position: absolute;
   top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 395px;
+  left: 7.8%;
   width: 270px;
+  border-radius: 17px;
+  overflow: hidden;
+  z-index: 99;
+  box-shadow: 0 5px 20px -10px #353535;
+}
 
-  &__title {
-    .text(24px, 24px, bold);
-    color: @orange;
-    text-align: center;
-  }
+.business__price {
+  margin: 0 0 35px 25px;
+  width: 220px;
+}
 
-  &__button {
-    .colors(#f3f4f8, @blue);
-    .text(16px, 24px, bold);
-    text-transform: uppercase;
-    border: none;
-  }
+.business__title {
+  .text(24px, 24px, bold);
+  color: @orange;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.business__button {
+  .colors(#f3f4f8, @blue);
+  .text(16px, 24px, bold);
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  padding: 18px 0;
 }
 
 @media (min-width: @tablet-width) {
   .profile {
-    padding: 40px;
-    height: 480px;
-
-    &__price {
-      width: 690px;
-      .text(28px, 33px, lighter);
+    &::before {
+      height: 55px;
+      border-bottom-left-radius: 55px;
+      border-bottom-right-radius: 55px;
     }
+  }
 
-    &__number {
-      .text(28px, 28px, normal);
-    }
+  .profile__wrapper {
+    padding: 125px 75px 12px 40px;
+    width: 643px;
+  }
 
-    &__button {
-      .text(20px, 20px, bold);
-    }
+  .profile__image {
+    top: 463px;
+    right: 80px;
+    z-index: 2;
+  }
 
-    &__title {
-      .text(45px, 45px, bold);
-      text-align: center;
-      width: 100%;
-    }
+  .profile__price {
+    position: relative;
+    width: 570px;
+    margin: 0 0 32px 83px;
+    .text(28px, 33px, lighter);
 
-    & tr {
-      flex-direction: row;
-      justify-content: space-between;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -35px;
+      width: 200px;
+      height: 285px;
+      background-color: #cccccc;
+      opacity: 0.2;
+      border-radius: 20px;
+      z-index: 1;
     }
+  }
+
+  .profile__number {
+    .text(28px, 28px, normal);
+    width: 66px;
+    height: 45px;
+    padding-top: 19px;
+    top: 0;
+    left: -90px;
+  }
+
+  .profile__button {
+    .text(20px, 20px, bold);
+    display: flex;
+    margin-left: 0;
+    width: 450px;
+  }
+
+  .profile__button span {
+    margin: 25px 0 0 20px;
+    color: #132576;
+  }
+
+  .profile__title {
+    .text(45px, 45px, bold);
+    text-align: center;
+    width: auto;
+    margin-bottom: 70px;
+    margin-left: 35px;
+  }
+
+  .profile tr {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 13px 0 17px 0;
+  }
+
+  .profile__business-icon {
+    display: block;
+    width: 66px;
+    height: 44px;
+    text-align: center;
+    background-color: #e2e5f2;
+    padding-top: 22px;
+    border-radius: 50%;
   }
 
   .business {
     text-align: center;
-    padding: 90px;
-    height: 350px;
-    width: 505px;
+    padding-top: 50px;
+    border-radius: 30px;
+    width: 690px;
     top: 0;
+    left: 5.1%;
+  }
 
-    &__price {
-      .text(22px, 28px, lighter);
-      width: 100%;
-    }
+  .business tr {
+    padding: 11px 0 13px 0;
+  }
 
-    &__title {
-      .text(45px, 45px, bold);
-    }
+  .business__price {
+    .text(22px, 28px, lighter);
+    width: 505px;
+    margin: 0 95px 55px 90px;
+  }
 
-    &__button {
-      .text(24px, 24px, bold);
-      text-transform: none;
-    }
+  .business__title {
+    .text(45px, 45px, bold);
+    margin-bottom: 45px;
+  }
+
+  .business__button {
+    .text(24px, 24px, bold);
+    text-transform: none;
+    padding: 43px 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .profile {
-    padding: 130px;
-    height: 490px;
+    &::before {
+      height: 60px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
 
-    &__price {
-      width: 910px;
+  .profile__wrapper {
+    padding: 165px 135px 108px 135px;
+    width: 1170px;
+  }
+
+  .profile__price {
+    width: 820px;
+    margin-left: 85px;
+
+    &::before {
+      width: 445px;
+      height: 300px;
+      top: -47px;
+      right: -155px;
+    }
+  }
+
+  .profile__image {
+    width: 200px;
+    height: 200px;
+    top: 347px;
+    right: 133px;
+  }
+
+  .profile__title {
+    margin-bottom: 132px;
+    margin-left: 0;
+  }
+
+  .profile__button {
+    &:hover,
+    :focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.4;
     }
   }
 
   .business {
+    width: 750px;
+    top: 14.6%;
+    left: 24%;
+  }
+
+  .business__price {
+    margin: 0 60px 55px 60px;
     width: 630px;
-    height: 445px;
-    padding: 60px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  }
+
+  .business__button {
+    outline: none;
+
+    &:hover,
+    :focus {
+      background-color: #edeff6;
+    }
+
+    &:active span {
+      opacity: 0.4;
+    }
   }
 }
