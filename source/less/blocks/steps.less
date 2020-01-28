@@ -90,7 +90,7 @@
   outline: none;
 
   &:hover,
-  :focus {
+  &:focus {
     background-color: #ffbd30;
   }
 
@@ -107,7 +107,7 @@
     margin-top: 5px;
 
     &:hover,
-    :focus {
+    &:focus {
       color: #161c35;
       opacity: 0.7;
       background-color: #ffffff;
@@ -209,7 +209,7 @@
   }
 
   &:hover,
-  :focus {
+  &:focus {
     &::before {
       background-color: #999999;
     }
@@ -273,24 +273,6 @@
     background: url("../img/tick.svg") no-repeat 0 0;
     background-size: 9px 9px;
   }
-
-  &:hover,
-  :focus {
-    &::before {
-      border-color: #959bb2;
-    }
-  }
-
-  &:active {
-    &::before {
-      border-color: #e2e5f1;
-      background-color: #e2e5f1;
-    }
-
-    &::after {
-      opacity: 0.4;
-    }
-  }
 }
 
 .dates__label-kids span {
@@ -298,10 +280,28 @@
 }
 
 .dates__kids input {
-  display: none;
-
   &:checked ~ .dates__label-kids::after {
     display: block;
+  }
+
+  &:hover,
+  &:focus {
+    & ~ label {
+      &::before {
+        border-color: #959bb2;
+      }
+    }
+  }
+
+  &:active {
+    & ~ label::before {
+      border-color: #e2e5f1;
+      background-color: #e2e5f1;
+    }
+
+    & ~ label::after {
+      opacity: 0.4;
+    }
   }
 }
 
@@ -339,7 +339,7 @@
   }
 
   &:hover,
-  :focus {
+  &:focus {
     border-color: #918f8f;
   }
 
@@ -359,9 +359,7 @@
 
 .calendar__list li:not(.calendar__week) {
   width: 30.25px;
-  height: 24px;
   text-align: center;
-  padding-top: 6px;
   .text(14px, 18px, normal);
   border-bottom: 1px solid #cbced9;
 }
@@ -381,42 +379,62 @@
   }
 }
 
+.calendar__day button {
+  position: relative;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-family: inherit;
+  .text(14px, 18px, normal);
+  color: #444444;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: none;
+    z-index: 10;
+    width: 29px;
+    height: 28px;
+    top: -1px;
+    left: -1px;
+    border: 2px solid #ff5c23;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      display: block;
+    }
+  }
+}
+
 .calendar__day {
   border-left: 1px solid #cbced9;
   color: #444444;
   background-color: #edeff6;
+  height: 30px;
 
   &:nth-child(7n) {
     border-right: 1px solid #cbced9;
   }
 
   &--disabled {
+    position: static;
     background-color: transparent;
     color: #c7c7c7;
+    padding-top: 6px;
+    height: 24px;
   }
 
   &--chosen {
     position: relative;
     background-color: #1d2e5b;
-    color: #ffffff;
 
-    &::before {
-      content: "";
-      position: absolute;
-      display: none;
-      z-index: 10;
-      width: 29px;
-      height: 28px;
-      top: -1px;
-      left: -1px;
-      border: 2px solid #ff5c23;
-    }
-
-    &:hover,
-    :focus {
-      &::before {
-        display: block;
-      }
+    & button {
+      color: #ffffff;
     }
   }
 }
@@ -475,7 +493,7 @@
   }
 
   &:hover,
-  :focus {
+  &:focus {
     border-color: #959bb2;
 
     &::before {
@@ -526,7 +544,7 @@
     }
 
     &:hover,
-    :focus {
+    &:focus {
       background-color: #dfe3f0;
       border-color: transparent;
 
@@ -603,7 +621,7 @@
       }
 
       &:hover,
-      :focus {
+      &:focus {
         &::before,
         &::after {
           background-color: #ffffff;
@@ -619,7 +637,7 @@
     }
 
     &:hover,
-    :focus {
+    &:focus {
       border-color: transparent;
     }
 
@@ -788,6 +806,7 @@
 
 .entertainment__plan textarea {
   width: calc(100% - 28px);
+  overflow: auto;
   padding: 8px 13px;
   min-height: 202px;
   border: 1px solid #cbced9;
@@ -1040,9 +1059,25 @@
 
   .calendar__list li:not(.calendar__week) {
     width: 74.5px;
-    height: 43.3px;
-    padding-top: 25px;
     .text(20px, 18px, medium);
+  }
+
+  .calendar__day {
+    height: 68.3px;
+
+    &--disabled {
+      height: 43.3px;
+      padding-top: 25px;
+    }
+  }
+
+  .calendar__day button {
+    .text(20px, 18px, medium);
+
+    &::before {
+      width: 72px;
+      height: 66px;
+    }
   }
 
   .calendar__week span {
@@ -1054,13 +1089,6 @@
     height: 26px;
     padding-top: 20px;
     .text(20px, 18px, medium);
-  }
-
-  .calendar__day--chosen {
-    &::before {
-      width: 72px;
-      height: 66px;
-    }
   }
 
   .run {
@@ -1470,23 +1498,20 @@
   }
 
   .calendar__list li:not(.calendar__week) {
-    width: 127px;
     text-align: left;
-    padding-left: 15px;
-    padding-top: 8px;
-    height: 62px;
     .text(18px, 30px, normal);
+    padding-left: 15px;
+    width: 127px;
   }
 
   .calendar__list span {
     display: inline;
-    padding-left: 8px;
   }
 
   .calendar__list p {
     display: block;
-    margin: -5px 0 0 0;
-    padding: 0;
+    margin: 0 0 -20px 0;
+    padding: 7px 0 0 0;
   }
 
   .calendar__week {
@@ -1497,13 +1522,25 @@
     height: 38px;
   }
 
-  .calendar__day--chosen {
-    cursor: pointer;
+  .calendar__day button {
+    text-align: left;
+    padding-bottom: 26px;
 
     &::before {
       width: 138px;
       height: 63px;
       border-width: 4px;
+      left: -16px;
+    }
+  }
+
+  .calendar__day {
+    cursor: pointer;
+    height: 70px;
+
+    &--disabled {
+      padding-top: 8px;
+      height: 62px;
     }
   }
 
@@ -1536,7 +1573,7 @@
     outline: none;
 
     &:hover,
-    :focus {
+    &:focus {
       &::before,
       &::after {
         background-color: #a5a7ac;
@@ -1595,7 +1632,7 @@
 
   .run__list-country a {
     &:hover,
-    :focus {
+    &:focus {
       color: #1d2e5b;
     }
 

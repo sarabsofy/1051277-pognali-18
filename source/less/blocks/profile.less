@@ -84,10 +84,6 @@
   margin-left: 25px;
 }
 
-.profile__business-icon {
-  display: none;
-}
-
 .business {
   display: none;
   background-color: #ffffff;
@@ -133,7 +129,7 @@
   }
 
   .profile__wrapper {
-    padding: 125px 75px 12px 40px;
+    padding: 125px 75px 30px 40px;
     width: 643px;
   }
 
@@ -146,7 +142,7 @@
   .profile__price {
     position: relative;
     width: 570px;
-    margin: 0 0 32px 83px;
+    margin: 0 0 57px 83px;
     .text(28px, 33px, lighter);
 
     &::before {
@@ -173,10 +169,23 @@
   }
 
   .profile__button {
+    position: relative;
     .text(20px, 20px, bold);
-    display: flex;
     margin-left: 0;
-    width: 450px;
+    padding-left: 65px;
+    width: 384px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -3px;
+      width: 66px;
+      height: 66px;
+      background: url("../img/business.svg") no-repeat 23px 22px #e2e5f2;
+      border-radius: 50%;
+      background-size: 17px 21px;
+    }
   }
 
   .profile__button span {
@@ -193,19 +202,15 @@
   }
 
   .profile tr {
+    position: relative;
     flex-direction: row;
-    justify-content: space-between;
     padding: 13px 0 17px 0;
   }
 
-  .profile__business-icon {
-    display: block;
-    width: 66px;
-    height: 44px;
-    text-align: center;
-    background-color: #e2e5f2;
-    padding-top: 22px;
-    border-radius: 50%;
+  .profile__value {
+    position: absolute;
+    right: 0;
+    top: 15px;
   }
 
   .business {
@@ -249,7 +254,7 @@
   }
 
   .profile__wrapper {
-    padding: 165px 135px 108px 135px;
+    padding: 165px 135px 128px 135px;
     width: 1170px;
   }
 
@@ -279,7 +284,7 @@
 
   .profile__button {
     &:hover,
-    :focus {
+    &:focus {
       opacity: 0.7;
     }
 

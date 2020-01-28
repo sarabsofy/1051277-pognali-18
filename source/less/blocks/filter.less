@@ -133,7 +133,9 @@
     top: 5px;
     background: url("../img/filter-close.svg") no-repeat 0 0;
   }
+}
 
+.filter__text {
   &--closed {
     display: none;
   }
@@ -234,7 +236,7 @@
         display: flex;
       }
 
-      & .filter__button--opened {
+      & .filter__text--opened {
         display: none;
       }
     }
@@ -244,7 +246,7 @@
         display: flex;
       }
 
-      & .filter__button--closed {
+      & .filter__text--closed {
         display: none;
       }
     }
@@ -300,14 +302,10 @@
       top: 10px;
       right: 3px;
     }
+  }
 
-    &--closed {
-      display: block;
-    }
-
-    &--opened {
-      display: block;
-    }
+  .filter__text {
+    display: block;
   }
 
   .filter__country {

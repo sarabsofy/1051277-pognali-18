@@ -213,19 +213,19 @@
 
 .companion__flags li {
   position: relative;
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .companion__flag {
-  margin-right: 15px;
   position: relative;
   border: none;
   outline: none;
   background-color: transparent;
   padding: 0;
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   &:hover ~ .companion__tooltip,
   &:focus ~ .companion__tooltip {
@@ -515,7 +515,7 @@
     will-change: transform;
   }
 
-  .companion__flag {
+  .companion__flags li {
     margin-right: 18px;
   }
 

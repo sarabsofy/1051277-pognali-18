@@ -71,24 +71,31 @@
 
 .registration__item a {
   display: flex;
+  padding-left: 13px;
+  min-height: 45px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #121936;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
 }
 
 .registration__contact {
   margin-top: 12px;
 }
 
-
-.registration__icon-wrapper {
-  background-color: #121936;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
 .registration__icon {
+  position: relative;
+  z-index: 2;
   fill: @yellow;
-  margin-top: 13.5px;
+  margin: 13.5px 29px 0 0;
 
   &--mail {
     margin-top: 16px;
@@ -132,6 +139,7 @@
   border: none;
   padding: 0;
   margin-left: -20px;
+  font-family: inherit;
 
   &::before {
     content: "";
@@ -235,14 +243,18 @@
     margin-top: 22px;
   }
 
-  .registration__icon-wrapper {
-    width: 70px;
-    height: 70px;
-    margin-right: 23px;
+  .registration__item a {
+    min-height: 70px;
+    padding-left: 21px;
+
+    &::before {
+      width: 70px;
+      height: 70px;
+    }
   }
 
   .registration__icon {
-    margin-top: 21px;
+    margin: 21px 43px 0 0;
     width: 27px;
     height: 27px;
 
@@ -294,14 +306,27 @@
     margin-right: 5px;
   }
 
-  .registration__icon-wrapper {
-    width: 90px;
-    height: 90px;
-    margin-right: 33px;
+  .registration__item a {
+    padding-left: 27px;
+    min-height: 90px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+    }
+
+    &:hover,
+    &:focus {
+      color: #ffbd30;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   .registration__icon {
-    margin-top: 27px;
+    margin: 27px 60px 0 0;
     width: 36px;
     height: 36px;
 
@@ -317,20 +342,9 @@
 
   .registration__authorization a {
     &:hover,
-    :focus {
+    &:focus {
       color: #e07f33;
       border-bottom-color: #8c573a;
-    }
-
-    &:active {
-      opacity: 0.6;
-    }
-  }
-
-  .registration__item a {
-    &:hover,
-    :focus {
-      color: #ffbd30;
     }
 
     &:active {

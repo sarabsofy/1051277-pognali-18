@@ -135,7 +135,7 @@
   margin: 0;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 25px 0 0 25px;
+  padding: 25px 90px 0 25px;
 }
 
 .countries-list__description {
@@ -152,9 +152,9 @@
 }
 
 .visitors {
-  &__icon {
-    opacity: 0.1;
-  }
+  padding-left: 19px;
+  background: url("../img/user.svg") no-repeat 0 9px;
+  background-size: 11px 11px;
 }
 
 
@@ -228,7 +228,7 @@
   }
 
   .countries-list picture {
-    height: 140px;
+    min-height: 140px;
   }
 
   .countries-list__item {
@@ -252,6 +252,8 @@
     border-top-left-radius: 0;
     margin-bottom: 0;
     z-index: 1;
+    height: 100%;
+    width: 191px;
   }
 
   .countries-list__visitors {
@@ -264,7 +266,7 @@
   }
 
   .countries-list__title {
-    padding: 0;
+    padding: 0 35px 0 0;
     .text(24px, 24px, bold);
     margin-bottom: 6px;
   }
@@ -279,11 +281,10 @@
     font-size: 20px;
   }
 
-  .visitors__icon {
-    width: 20px;
-    height: 20px;
-    margin-top: 3px;
-    margin-right: 5px;
+  .visitors {
+    padding-left: 30px;
+    background-size: 20px 20px;
+    background-position: 0 4px;
   }
 }
 

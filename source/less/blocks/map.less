@@ -22,26 +22,28 @@
 }
 
 .map__location {
-  padding: 55px 25px 32px 25px;
-  width: 270px;
+  position: relative;
+  padding: 57px 25px 32px 87px;
+  width: 208px;
   margin: 0 auto;
   text-transform: uppercase;
-  display: flex;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 45px;
+    top: 55px;
+    left: 25px;
+    border-radius: 50%;
+    background: url("../img/contacts-location.svg") no-repeat 16px 13px #121936;
+    background-size: 14px 22px;
+  }
 }
 
 .map__location span {
   width: 145px;
   margin-top: 2px;
-}
-
-.map__image-wrapper {
-  background-color: #121936;
-  width: 45px;
-  height: 32px;
-  border-radius: 50%;
-  padding-top: 13px;
-  text-align: center;
-  margin-right: 17px;
 }
 
 .map__button {
@@ -90,6 +92,12 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 320px;
+}
+
+.map__route-image img {
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -108,26 +116,22 @@
   }
 
   .map__location {
-    padding: 100px 75px 43px 75px;
-    width: 618px;
+    padding: 120px 75px 63px 170px;
+    width: 523px;
+
+    &::before {
+      width: 70px;
+      height: 70px;
+      left: 75px;
+      top: 100px;
+      background-size: 22px 32px;
+      background-position: 23px 20px;
+    }
   }
 
   .map__location span {
     width: auto;
     margin-top: 20px;
-  }
-
-  .map__image-wrapper {
-    width: 70px;
-    height: 50px;
-    padding-top: 20px;
-    text-align: center;
-    margin-right: 25px;
-  }
-
-  .map__image-wrapper img {
-    width: 22px;
-    height: 32px;
   }
 
   .map__button {
@@ -153,6 +157,11 @@
   .map__route-image {
     height: 565px;
   }
+
+  .map__route-image img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -169,25 +178,22 @@
   }
 
   .map__location {
-    padding: 115px 142px 0 150px;
-    width: 555px;
+    padding: 145px 142px 0 270px;
+    width: 433px;
     margin: 0;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      top: 115px;
+      left: 148px;
+      background-size: 28px 44px;
+      background-position: 30px 25px;
+    }
   }
 
   .map__location span {
     margin-top: 28px;
-  }
-
-  .map__image-wrapper {
-    width: 90px;
-    height: 65px;
-    padding-top: 25px;
-    margin-right: 32px;
-  }
-
-  .map__image-wrapper img {
-    width: 28px;
-    height: 44px;
   }
 
   .map__button {
@@ -229,5 +235,10 @@
 
   .map__route-image {
     height: 495px;
+  }
+
+  .map__route-image img {
+    width: 100%;
+    height: auto;
   }
 }

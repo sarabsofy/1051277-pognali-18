@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
   <script src="js/picturefill.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
 </head>
 
 <body class="inner-page form-page">
@@ -16,7 +19,7 @@
   <header class="site-header site-header--opened">
     <div class="site-header__wrapper">
       <a class="site-header__logo" href="index.html">
-        <picture class="site-header__logo--closed">
+        <picture class="site-header__logo site-header__logo--closed">
           <source type="image/webp" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" media="(min-width: 1440px)">
           <source type="image/webp" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" media="(min-width: 768px)">
           <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
@@ -24,7 +27,7 @@
           <source srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" media="(min-width: 768px)">
           <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Погнали?">
         </picture>
-        <picture class="site-header__logo--opened">
+        <picture class="site-header__logo site-header__logo--opened">
           <source type="image/webp" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x" media="(min-width: 768px)">
           <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
           <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
@@ -47,28 +50,16 @@
             </li>
           </ul>
           <ul class="main-nav__list user-list">
-            <li class="user-list__item--btn">
+            <li class="user-list__item user-list__item--btn">
               <a href="">Авторизация</a>
             </li>
             <li class="user-list__item">
-              <a href="tel:+78005558628">
-                <div class="user-list__icon-wrapper">
-                  <svg class="user-list__icon user-list__icon--mobile" width="18" height="18">
-                    <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
-                  </svg>
-                  <img src="img/topmenu-phone.svg" class="user-list__icon user-list__icon--desktop" width="20" height="20" alt="tel">
-                </div>
+              <a href="tel:+78005558628" class="user-list__link user-list__link--phone">
                 <p class="user-list__contact">8 800 555-86-28</p>
               </a>
             </li>
             <li class="user-list__item">
-              <a href="mailto:mail@htmlacademy.ru">
-                <div class="user-list__icon-wrapper">
-                  <svg class="user-list__icon user-list__icon--mail user-list__icon--mobile" width="18" height="13">
-                    <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
-                  </svg>
-                  <img src="img/topmenu-mail.svg" class="user-list__icon user-list__icon--desktop user-list__icon--desktop-mail" width="20" height="14" alt="mail">
-                </div>
+              <a href="mailto:mail@htmlacademy.ru" class="user-list__link user-list__link--mail">
                 <p class="user-list__contact">mail@htmlacademy.ru</p>
               </a>
             </li>
@@ -127,7 +118,7 @@
             <legend class="account__title">Транспорт</legend>
             <ul class="account__list">
               <li>
-                <input type="checkbox" name="plane" class="account__input" id="plane">
+                <input type="checkbox" name="plane" class="account__input visually-hidden" id="plane">
                 <label for="plane" class="account__label">
                   <svg height="16" width="14">
                     <use xlink:href="img/sprite.svg#icon-plane"></use>
@@ -135,7 +126,7 @@
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="bus" class="account__input" id="bus">
+                <input type="checkbox" name="bus" class="account__input visually-hidden" id="bus">
                 <label for="bus" class="account__label">
                   <svg height="16" width="13">
                     <use xlink:href="img/sprite.svg#icon-bus"></use>
@@ -143,7 +134,7 @@
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="bike" class="account__input" id="bike">
+                <input type="checkbox" name="bike" class="account__input visually-hidden" id="bike">
                 <label for="bike" class="account__label">
                   <svg height="16" width="19">
                     <use xlink:href="img/sprite.svg#icon-bike"></use>
@@ -151,7 +142,7 @@
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="run" class="account__input" id="run">
+                <input type="checkbox" name="run" class="account__input visually-hidden" id="run">
                 <label for="run" class="account__label">
                   <svg width="15" height="16">
                     <use xlink:href="img/sprite.svg#icon-run"></use>
@@ -204,12 +195,12 @@
                   <span>Чел.</span>
                   <div class="dates__input">
                     <input class="dates__input-number" type="number" value="2" name="companions" id="companions">
-                    <button class="dates__button dates__button--minus"></button>
-                    <button class="dates__button dates__button--plus"></button>
+                    <button class="dates__button dates__button--minus" aria-label="minus"></button>
+                    <button class="dates__button dates__button--plus" aria-label="plus"></button>
                   </div>
                 </div>
                 <div class="dates__kids">
-                  <input type="checkbox" name="kids" id="kids">
+                  <input type="checkbox" name="kids" id="kids" class="visually-hidden">
                   <label class="dates__label-kids" for="kids"><span>Можно с детьми</span></label>
                 </div>
                 <div class="dates__day">
@@ -217,14 +208,14 @@
                   <span>Дн.</span>
                   <div class="dates__input">
                     <input class="dates__input-number" type="number" value="2" name="days" id="days">
-                    <button class="dates__button dates__button--minus"></button>
-                    <button class="dates__button dates__button--plus"></button>
+                    <button class="dates__button dates__button--minus" aria-label="minus"></button>
+                    <button class="dates__button dates__button--plus" aria-label="plus"></button>
                   </div>
                 </div>
                 <div class="dates__calendar calendar">
-                  <button type="button" class="calendar__button"></button>
+                  <button type="button" class="calendar__button" aria-label="back"></button>
                   <h4 class="calendar__title">Март 2019</h4>
-                  <button type="button" class="calendar__button calendar__button--next"></button>
+                  <button type="button" class="calendar__button calendar__button--next" aria-label="next"></button>
                   <ul class="calendar__list">
                     <li class="calendar__week">П<span>н</span></li>
                     <li class="calendar__week">В<span>т</span></li>
@@ -239,7 +230,7 @@
                     <li class="calendar__day calendar__day--disabled">26</li>
                     <li class="calendar__day calendar__day--disabled">27</li>
                     <li class="calendar__day calendar__day--disabled">28</li>
-                    <li class="calendar__day calendar__day--disabled">1<span>мар</span></li>
+                    <li class="calendar__day calendar__day--disabled">1<span> мар</span></li>
                     <li class="calendar__day calendar__day--disabled">2</li>
                     <li class="calendar__day calendar__day--disabled">3</li>
                     <li class="calendar__day calendar__day--disabled">4</li>
@@ -264,19 +255,19 @@
                     <li class="calendar__day calendar__day--disabled">23</li>
                     <li class="calendar__day calendar__day--disabled">24</li>
                     <li class="calendar__day calendar__day--disabled">25</li>
-                    <li class="calendar__day calendar__day--chosen">26 <p>Заезд</p>
+                    <li class="calendar__day calendar__day--chosen"><button type="button" aria-label="day">26 <p>Заезд</p></button>
                     </li>
-                    <li class="calendar__day calendar__day--chosen">27</li>
-                    <li class="calendar__day calendar__day--chosen">28 <p>Выезд</p>
+                    <li class="calendar__day calendar__day--chosen"><button type="button" aria-label="day">27</button></li>
+                    <li class="calendar__day calendar__day--chosen"><button type="button" aria-label="day">28 <p>Выезд</p></button>
                     </li>
-                    <li class="calendar__day">29</li>
-                    <li class="calendar__day">30</li>
-                    <li class="calendar__day">31</li>
-                    <li class="calendar__day">1<span>апр</span></li>
-                    <li class="calendar__day">2</li>
-                    <li class="calendar__day">3</li>
-                    <li class="calendar__day">4</li>
-                    <li class="calendar__day">5</li>
+                    <li class="calendar__day"><button type="button" aria-label="day">29</button></li>
+                    <li class="calendar__day"><button type="button" aria-label="day">30</button></li>
+                    <li class="calendar__day"><button type="button" aria-label="day">31</button></li>
+                    <li class="calendar__day"><button type="button" aria-label="day">1<span> апр</span></button></li>
+                    <li class="calendar__day"><button type="button" aria-label="day">2</button></li>
+                    <li class="calendar__day"><button type="button" aria-label="day">3</button></li>
+                    <li class="calendar__day"><button type="button" aria-label="day">4</button></li>
+                    <li class="calendar__day"><button type="button" aria-label="day">5</button></li>
                   </ul>
                 </div>
               </div>

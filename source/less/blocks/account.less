@@ -118,6 +118,7 @@
 .account__text {
   width: calc(100% - 52px);
   resize: none;
+  overflow: auto;
   background-color: transparent;
   padding: 22px 25px;
   font-family: inherit;
@@ -180,8 +181,6 @@
 }
 
 .account__input {
-  display: none;
-
   &:checked ~ .account__label svg {
     fill: #1d2e5b;
   }
@@ -294,10 +293,10 @@
 
   .account__personal {
     width: 330px;
-    position: absolute;
-    right: 155px;
-    top: -191px;
+    position: relative;
     justify-content: flex-end;
+    margin-top: -265px;
+    margin-left: 832px;
   }
 
   .account__photo {
@@ -314,12 +313,16 @@
   }
 
   .account__button {
-    margin-top: 0;
+    margin-top: -10px;
     width: 191px;
     padding: 15px 0;
+    margin-bottom: 20px;
+    height: max-content;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 
     &:hover,
-    :focus {
+    &:focus {
       background-color: #d1d7e9;
     }
 
@@ -374,25 +377,30 @@
     justify-content: center;
   }
 
-  .account__list li {
+  .account__input {
     &:hover,
-    :focus {
-      box-shadow: 0 2px 5px 1px #e4e6ec;
+    &:focus {
+      & ~ .account__label {
+        border-radius: 50%;
+        box-shadow: 0 2px 5px 1px #e4e6ec;
+      }
 
-      & .account__label svg {
+      & ~ .account__label svg {
         fill: #b2b2b2;
       }
 
-      & .account__input:checked ~ .account__label svg {
+      &:checked ~ .account__label svg {
         fill: #57617c;
       }
     }
 
     &:active {
-      box-shadow: none;
-      background-color: #e2e5f1;
+      & ~ .account__label {
+        box-shadow: none;
+        background-color: #e2e5f1;
+      }
 
-      & .account__label svg {
+      & ~ .account__label svg {
         opacity: 0.7;
       }
     }

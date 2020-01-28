@@ -89,8 +89,9 @@
     position: relative;
     .colors(@yellow, #1d2e5b);
     .text(24px, 24px, bold);
-    .button();
-    width: 210px;
+    .button(27px 127px 29px 33px);
+    width: max-content;
+    margin-right: 350px;
 
     &::before {
       content: "";
@@ -155,6 +156,8 @@
   }
 
   .service__button {
+    margin-right: 900px;
+
     &:hover {
       background-color: #ffbd30;
     }
