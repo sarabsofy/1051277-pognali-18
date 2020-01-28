@@ -1,85 +1,158 @@
 .intro {
   .colors(#161c36, #ffffff);
-  background: url("../img/globe-back-mobile@1x.jpg") no-repeat 0% 0 #161c36;
-  padding: 25px;
-  min-height: 925px;
+  background: url("../img/globe-back-mobile@1x.jpg") no-repeat 50% -70px #161c36;
   text-align: center;
+  padding-top: 18px;
+  position: relative;
+}
 
-  &__title {
-    display: block;
-    width: 255px;
-    margin: 0 auto;
-    .text(36px, 40px, bold);
-  }
+.intro__wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  min-height: 385px;
+}
 
-  &__quotation {
-    .colors(#161c35, #ffffff);
-    .text(16px, 22px, bold);
-    text-align: left;
-    margin-left: 0;
-    width: 160px;
+.intro__title {
+  display: block;
+  position: relative;
+  z-index: 2;
+  width: 255px;
+  margin: 0 auto;
+  .text(36px, 40px, bold);
+}
 
-    & q {
-      .text(16px, 22px, lighter);
-    }
-  }
+.intro__traveller {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  z-index: 1;
+}
 
-  &__list {
-    background-color: @blue;
-    .list();
-    text-align: left;
-  }
+.intro__quotation {
+  .colors(#161c35, #ffffff);
+  .text(16px, 22px, bold);
+  text-align: left;
+  margin: 0;
+  padding: 45px 50px 32px 25px;
+}
 
-  &__text {
-    color: #161c35;
-    margin: 0;
-  }
+.intro__quotation q {
+  display: block;
+  .text(16px, 22px, lighter);
+  width: 155px;
+  padding: 0 90px 0 25px;
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
 
-  &__item {
-    display: flex;
-    justify-content: space-between;
+.intro__quotation p {
+  display: block;
+  width: 155px;
+  padding: 0 90px 0 25px;
+  margin: 0 auto;
+}
+
+
+.intro__list {
+  position: relative;
+  background-color: #161c35;
+  .list();
+  padding: 0 25px 40px 25px;
+  text-align: left;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
     width: 100%;
-    .text(18px, 18px, bold);
-
-    &:nth-child(1) {
-      background-color: #ff8d30;
-    }
-
-    &:nth-child(2) {
-      background-color: #ffa530;
-    }
-
-    &:nth-child(3) {
-      background-color: #ffbd30;
-    }
-
-    &:nth-child(4) {
-      background-color: #ffd74b;
-    }
+    height: 280px;
+    top: 80px;
+    left: 0;
+    background-color: @blue;
+    z-index: -1;
   }
 }
+
+.intro__text {
+  color: #161c35;
+  margin: 0;
+  width: 150px;
+}
+
+.intro__item {
+  display: flex;
+  justify-content: space-between;
+  width: 223px;
+  padding: 20px 22px 104px 25px;
+  margin: 0 auto;
+  margin-top: -80px;
+  border-radius: 10px;
+  .text(18px, 18px, bold);
+
+  &:nth-child(1) {
+    background-color: #ff8d30;
+    margin-top: 0;
+  }
+
+  &:nth-child(2) {
+    background-color: #ffa530;
+  }
+
+  &:nth-child(3) {
+    background-color: #ffbd30;
+  }
+
+  &:nth-child(4) {
+    background-color: #ffd74b;
+    padding-bottom: 24px;
+  }
+}
+
 
 .contacts-list {
   .list();
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
 
-  &__login {
-    .colors(@yellow, @blue);
-    .text(17px, 30px, bold);
-    text-transform: uppercase;
+
+.contacts-list__login {
+  display: block;
+  .colors(@yellow, @blue);
+  .text(17px, 30px, bold);
+  text-transform: uppercase;
+  padding: 5px 40px 5px 37px;
+  border-radius: 20px;
+}
+
+.contacts-list__icon {
+  display: block;
+  border-radius: 50%;
+
+  &--phone {
+    background-color: #ff8d30;
+    padding: 10px 10px 8px 12px;
   }
 
-  &__icon {
-    &--phone {
-      background-color: #ff8d30;
-    }
-
-    &--mail {
-      background-color: #ffbd30;
-    }
+  &--mail {
+    background-color: #ffbd30;
+    padding: 12px 11px 9px 11px;
   }
 }
+
+@media (min-resolution: @retina-dppx) {
+  .intro {
+    background-image: url("../img/globe-back-mobile@2x.jpg");
+    background-size: 100% auto;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .contacts-list {
@@ -87,56 +160,194 @@
   }
 
   .intro {
-    padding: 65px 40px 100px 40px;
-    min-height: 960px;
-    background: url("../img/globe-back-tablet@1x.jpg") no-repeat 95% 0 #161c36;
+    padding: 27px 40px 100px 40px;
+    background: url("../img/globe-back-tablet@1x.jpg") no-repeat 50% 253px #182044;
+  }
 
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
+  .intro__wrapper {
+    width: 688px;
+    min-height: 210px;
+    padding-bottom: 40px;
+  }
+
+  .intro__traveller {
+    top: 100%;
+    left: 35.5%;
+  }
+
+  .intro__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    width: 688px;
+    margin: 0 auto;
+    background-color: transparent;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .intro__item {
+    display: block;
+    margin: 0;
+    padding: 30px 0 28px 34px;
+    width: calc(50% - 34px);
+    .text(24px, 24px, bold);
+    border-radius: 20px;
+  }
+
+  .intro__text {
+    width: 185px;
+    margin-bottom: 10px;
+  }
+
+  .intro__title {
+    width: 395px;
+    .text(60px, 70px, bold);
+  }
+
+  .intro__quotation {
+    width: 265px;
+    background-color: transparent;
+    padding: 55px 390px 208px 35px;
+    margin: 0 auto;
+    .text(21px, 25px, bold);
+  }
+
+  .intro__quotation q {
+    .text(28px, 33px, lighter);
+    width: 265px;
+    margin-bottom: 45px;
+    padding: 0;
+  }
+
+  .intro__quotation p {
+    width: 265px;
+    padding: 0;
+  }
+
+  @media (min-resolution: @retina-dppx) {
+    .intro {
+      background-image: url("../img/globe-back-tablet@2x.jpg");
+      background-size: 1479px auto;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: 1439px) {
+  .intro__item {
+    &:nth-child(1) {
+      box-shadow: 60px 0 0 0 #ff8d30;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
 
-    &__item {
-      width: 50%;
-      .text(24px, 24px, bold);
+    &:nth-child(2) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
 
-    &__title {
-      width: 395px;
-      .text(60px, 70px, bold);
+    &:nth-child(3) {
+      box-shadow: 60px 0 0 0 #ffbd30;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
 
-    &__quotation {
-      width: 285px;
-      .text(21px, 25px, bold);
-
-      & q {
-        .text(28px, 33px, lighter);
-      }
+    &:nth-child(4) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .intro {
-    padding: 115px 60px 120px 60px;
-    min-height: 410px;
-    background: url("../img/globe-back-desktop@1x.jpg") no-repeat 95% 0 #161c36;
+    padding: 0;
+    background: url("../img/globe-back-desktop@1x.jpg") no-repeat 50% -102px #161c36;
+  }
+
+  .intro__container {
+    padding: 98px 60px 122px 60px;
+    margin: 0 auto;
+    width: 1320px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .intro__wrapper {
+    width: 958px;
+    margin: 0;
+    padding-left: 67px;
+    margin-left: auto;
+    padding-bottom: 0;
+  }
+
+  .intro__traveller {
+    top: -98px;
+    left: 53%;
+  }
+
+  .intro__list {
+    width: 1320px;
+  }
+
+  .intro__item {
+    width: calc(25% - 75px);
+    padding: 30px 40px 30px 35px;
+    display: flex;
     justify-content: space-between;
+    border-radius: 20px;
 
-    &__list {
-      width: 100%;
+    &:nth-child(1) {
+      box-shadow: 30px 0 0 0 #ff8d30;
+      padding-right: 32px;
+      width: calc(25% - 83px);
     }
 
-    &__item {
-      width: 25%;
+    &:nth-child(2) {
+      box-shadow: 30px 0 0 0 #ffa530;
+      width: calc(25% - 52px);
+      padding-right: 32px;
     }
 
-    &__title {
-      text-align: left;
-      margin-left: 0;
+    &:nth-child(3) {
+      box-shadow: 30px 0 0 0 #ffbd30;
+      width: calc(25% - 50px);
+      padding-right: 30px;
+    }
+
+    &:nth-child(4) {
+      width: calc(25% - 75px);
+      padding-right: 32px;
+      padding-left: 28px;
+    }
+  }
+
+  .intro__title {
+    text-align: left;
+    margin: 0 0 103px 0;
+  }
+
+  .intro__quotation {
+    padding: 12px 25px 0 7px;
+    width: 258px;
+  }
+
+  .intro__quotation q {
+    margin-bottom: 45px;
+  }
+
+  .intro__text {
+    margin-bottom: 0;
+  }
+
+  @media (min-resolution: @retina-dppx) {
+    .intro {
+      background-image: url("../img/globe-back-desktop@2x.jpg");
+      background-size: 1800px auto;
     }
   }
 }
