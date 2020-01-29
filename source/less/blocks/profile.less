@@ -22,12 +22,8 @@
   padding: 73px 25px 10px 25px;
   margin: 0 auto;
   width: 270px;
-}
-
-.profile__image {
-  position: absolute;
-  top: 63px;
-  right: 25px;
+  background: url("../img/rates@1x.png") no-repeat 88% 63px;
+  background-size: 99px 99px;
 }
 
 .profile__price {
@@ -59,10 +55,10 @@
   flex-direction: column;
   position: relative;
   padding: 8px 0;
-  border-bottom: 1px solid #e1e3e9;
+  border-bottom: 1px solid #d6d9e6;
 
   &:first-child {
-    border-top: 1px solid #e1e3e9;
+    border-top: 1px solid #d6d9e6;
   }
 
   &:nth-child(1) .profile__number {
@@ -119,24 +115,36 @@
   padding: 18px 0;
 }
 
+@media (min-resolution: @retina-dppx) {
+  .profile__wrapper {
+    background-image: url("../img/rates@2x.png");
+    background-size: 99px 99px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .profile {
     &::before {
-      height: 55px;
+      height: 45px;
       border-bottom-left-radius: 55px;
       border-bottom-right-radius: 55px;
     }
   }
 
   .profile__wrapper {
-    padding: 125px 75px 30px 40px;
+    padding: 125px 75px 40px 40px;
     width: 643px;
+    background: url("../img/rates@1x.png") no-repeat 88% 460px,
+      url("../img/blue-back-tablet.png") no-repeat 94% 200px;
+    background-size: 99px 99px, 198px 285px;
   }
 
-  .profile__image {
-    top: 463px;
-    right: 80px;
-    z-index: 2;
+  @media (min-resolution: @retina-dppx) {
+    .profile__wrapper {
+      background: url("../img/rates@2x.png") no-repeat 88% 460px,
+        url("../img/blue-back-tablet.png") no-repeat 94% 200px;
+      background-size: 99px 99px, 198px 285px;
+    }
   }
 
   .profile__price {
@@ -144,19 +152,6 @@
     width: 570px;
     margin: 0 0 57px 83px;
     .text(28px, 33px, lighter);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -40px;
-      right: -35px;
-      width: 200px;
-      height: 285px;
-      background-color: #cccccc;
-      opacity: 0.2;
-      border-radius: 20px;
-      z-index: 1;
-    }
   }
 
   .profile__number {
@@ -256,25 +251,22 @@
   .profile__wrapper {
     padding: 165px 135px 128px 135px;
     width: 1170px;
+    background: url("../img/rates@1x.png") no-repeat 89% 350px,
+      url("../img/blue-back-desktop.png") no-repeat 75% 300px;
+    background-size: 198px 198px, 444px 300px;
+  }
+
+  @media (min-resolution: @retina-dppx) {
+    .profile__wrapper {
+      background: url("../img/rates@2x.png") no-repeat 89% 350px,
+        url("../img/blue-back-desktop.png") no-repeat 75% 300px;
+      background-size: 198px 198px, 444px 300px;
+    }
   }
 
   .profile__price {
     width: 820px;
     margin-left: 85px;
-
-    &::before {
-      width: 445px;
-      height: 300px;
-      top: -47px;
-      right: -155px;
-    }
-  }
-
-  .profile__image {
-    width: 200px;
-    height: 200px;
-    top: 347px;
-    right: 133px;
   }
 
   .profile__title {

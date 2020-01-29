@@ -134,8 +134,8 @@
     padding-top: 40px;
   }
 
-  .site-header {
-    background-color: #182044;
+  .inner-page .site-header {
+    background-color: #161c35;
 
     &--active {
       background-color: #ffffff;
@@ -150,11 +150,19 @@
     }
   }
 
-  .inner-page .site-header {
-    background-color: #161c35;
+  .site-header {
+    background-color: #182044;
 
     &--active {
       background-color: #ffffff;
+    }
+
+    &--opened {
+      background-color: #ffffff;
+
+      .main-nav__wrapper {
+        padding: 40px 0 90px 0;
+      }
     }
   }
 
@@ -200,6 +208,10 @@
 
       .main-nav__wrapper {
         padding: 0;
+      }
+
+      .site-header__toggle {
+        display: block;
       }
     }
   }
